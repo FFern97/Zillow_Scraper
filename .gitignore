@@ -1,0 +1,29 @@
+# Entorno virtual de Python
+/venv/
+/.venv/
+/env/
+/ENV/
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de configuración sensibles
+config.json
+
+# Archivos de salida generados por los scripts
+*.json
+*.csv
+
+
+# Archivos de error y depuración
+*.html
+*.png
+
+# Archivos específicos del sistema operativo o del editor
+.DS_Store
+.vscode/
+.idea/
+Thumbs.db
