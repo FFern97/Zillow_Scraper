@@ -152,7 +152,7 @@ def aplicar_filtros_vista_web(driver, sort_by_newest, min_price, days_on_zillow)
     print("¡ÉXITO! Todos los filtros de la vista web se aplicaron correctamente.")
     return True
 
-# --- Función Principal del Scraper (Sin Paginación) ---
+# --- Función Principal del Scraper ---
 def extraer_links_propiedades_zillow(driver, ciudad_estado_param, tipo_listado="rentals", sort_by_newest=True, min_price=None, days_on_zillow=None):
     print(f"Iniciando extracción para: {ciudad_estado_param} (Tipo: {tipo_listado})")
     ubicacion_formateada = formatear_ubicacion_zillow(ciudad_estado_param)
@@ -229,7 +229,7 @@ if __name__ == "__main__":
         elif dias_input.strip(): print("Valor para 'Days on Zillow' no válido. No se aplicará el filtro.")
     except ValueError: print("Entrada de días inválida. No se aplicará filtro de días.")
     
-    sort_by_newest = True # Siempre aplicaremos el orden 'Newest'
+    sort_by_newest = True
     
     mi_driver = configurar_driver()
     if mi_driver:

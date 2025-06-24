@@ -13,7 +13,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from urllib.parse import urlencode
 
-# --- (Configuración Global y Funciones Auxiliares se mantienen igual) ---
+# --- Configuración Global y Funciones Auxiliares ---
 API_KEY = "" 
 try:
     with open("config.json", "r") as config_file:
@@ -45,7 +45,7 @@ def configurar_driver():
         return driver
     except Exception as e: print(f"Error al configurar el driver de Selenium: {e}"); return None
 
-# --- Lógica Principal del Scraper de Detalles ---
+# --- Lógica Principal ---
 def scrapear_detalles_de_propiedades(archivo_json_entrada, archivo_csv_salida):
     """
     Lee una lista de URLs de Zillow, visita cada una, y si es publicada por el dueño,
